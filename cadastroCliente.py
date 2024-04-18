@@ -35,11 +35,12 @@ def buscar_cliente():
         print("Cliente não encontrado.")
 
 def visualizar_clientes():
-    with open('clientes.csv', mode='r') as arquivo_csv:
+    with open('clientes.csv', mode='r', encoding='utf-8-sig') as arquivo_csv:
         leitor = csv.reader(arquivo_csv)
         print("Lista de clientes cadastrados:")
         for linha in leitor:
             print(f"Nome: {linha[0]}, Email: {linha[1]}, Telefone: {linha[2]}")
+
 
 def menu():
     while True:
